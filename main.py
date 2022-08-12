@@ -2,7 +2,7 @@ from aiogram import Bot, Dispatcher, executor, types
 
 # from aiogram.types import InputFile
 
-TOKEN = '5599993276:AAFmRTWMwwqa-MW5gwsxIMf85r0bTD4Kfm4'
+TOKEN = ''
 
 bot = Bot(token=TOKEN, parse_mode='HTML')
 dp = Dispatcher(bot)
