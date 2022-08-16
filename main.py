@@ -37,13 +37,13 @@ async def command_exercises(message: types.Message):
                            '<b>Пресс</b>\n'
                            '/press - упражнения на пресс \n\n'
                            '<b>Упражнения с собственным весом:</b>\n'
-                           '/ownweight - упражнения для тренировки с собственным весом\n'
-                           '<b>Кардио и жиросжигание</b>\n\n'
+                           '/ownweight - упражнения для тренировки с собственным весом\n\n'
+                           '<b>Кардио и жиросжигание</b>\n'
                            '/cardio - кардио тренировка')
 
 
 # упражнения на бицепс
-@dp.message_handler(commands=['biceps'])
+@dp.message_handler(commands=[Commands.biceps.value])
 async def command_biceps(message: types.Message):
     await bot.send_message(message.from_user.id,
                            'Упражнения для развития бицепса. Возможно выполнение 3-4 упражнений с большими весами по'
@@ -53,7 +53,7 @@ async def command_biceps(message: types.Message):
 
 
 # упражнения на трицепс
-@dp.message_handler(commands=['triceps'])
+@dp.message_handler(commands=[Commands.triceps.value])
 async def command_triceps(message: types.Message):
     await bot.send_message(message.from_user.id, 'Упражнения для развития трицепса. Оптимально выполнять 3-4 упражнения'
                                                  ' по 4-5 подходов на 10-12 повторений в каждом подходе.'
@@ -62,56 +62,56 @@ async def command_triceps(message: types.Message):
 
 
 # упражнения на запястья
-@dp.message_handler(commands=['wrists'])
+@dp.message_handler(commands=[Commands.wrists.value])
 async def command_wrists(message: types.Message):
     await bot.send_message(message.from_user.id, 'Упражнения для развития запястий: \n')
     await ExercisesGenerator.list_exercires(wrists, message.from_user.id)
 
 
 # упражнения на грудь
-@dp.message_handler(commands=['chest'])
+@dp.message_handler(commands=[Commands.chest.value])
 async def command_chest(message: types.Message):
     await bot.send_message(message.from_user.id, 'Упражнения для развития грудных мышц: \n')
     await ExercisesGenerator.list_exercires(chest, message.from_user.id)
 
 
 # упражнения на спину
-@dp.message_handler(commands=['back'])
+@dp.message_handler(commands=[Commands.back.value])
 async def command_back(message: types.Message):
     await bot.send_message(message.from_user.id, 'Упражнения для развития мышц спины: \n')
     await ExercisesGenerator.list_exercires(back, message.from_user.id)
 
 
 # упражнения на плечи
-@dp.message_handler(commands=['shoulders'])
+@dp.message_handler(commands=[Commands.shoulders.value])
 async def command_shoulders(message: types.Message):
     await bot.send_message(message.from_user.id, 'Упражнения для развития плечевых мышц: \n')
     await ExercisesGenerator.list_exercires(shoulders, message.from_user.id)
 
 
 # упражнения на ноги
-@dp.message_handler(commands=['legs'])
+@dp.message_handler(commands=[Commands.legs.value])
 async def command_legs(message: types.Message):
     await bot.send_message(message.from_user.id, 'Упражнения для развития мышц ног: \n')
     await ExercisesGenerator.list_exercires(legs, message.from_user.id)
 
 
 # упражнения для прокачки пресса
-@dp.message_handler(commands=['press'])
+@dp.message_handler(commands=[Commands.press.value])
 async def command_press(message: types.Message):
     await bot.send_message(message.from_user.id, 'Упражнения для прокачки пресса: \n')
     await ExercisesGenerator.list_exercires(press, message.from_user.id)
 
 
 # упражнения для прокачки тела с собственным весом
-@dp.message_handler(commands=['ownweight'])
+@dp.message_handler(commands=[Commands.ownweight.value])
 async def command_press(message: types.Message):
     await bot.send_message(message.from_user.id, 'Упражнения для прокачки тела с собственным весом: \n')
     await ExercisesGenerator.list_exercires(ownweight, message.from_user.id)
 
 
 # упражнения для кардио тренировки
-@dp.message_handler(commands=['cardio'])
+@dp.message_handler(commands=[Commands.cardio.value])
 async def command_press(message: types.Message):
     await bot.send_message(message.from_user.id, 'Упражнения для кардио тренировки: \n')
     await ExercisesGenerator.list_exercires(cardio, message.from_user.id)
