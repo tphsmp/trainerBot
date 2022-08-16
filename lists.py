@@ -40,3 +40,9 @@ legs = {'backsquats.jpg':'Приседения со штангой',
         'legsextensions.jpg':'Разгибания ног в тренажере',
         'gakksquats.jpg':'Гакк приседания',
         'chestsquats.jpg':'Приседания с штангой на груди'}
+
+press = {}
+
+ownweight = {}
+
+cardio = {}
